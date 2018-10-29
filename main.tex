@@ -1,0 +1,52 @@
+%------------------------------------------------------------------------------
+% Sam Nazari
+% Proposal Defense: 29-Dec-2016 
+%------------------------------------------------------------------------------
+%
+% AMS-LaTeX version 2 sample file for journals, based on amsart.cls.
+%
+\documentclass[reqno,8pt]{amsart}
+\usepackage{myPreamble}
+\usepackage{setspace} % Double spacing
+\doublespacing
+\usepackage[text={7in,10in},centering]{geometry}
+\newenvironment{nouppercase}{%
+  \let\uppercase\relax%
+  \renewcommand{\uppercasenonmath}[1]{}}{}
+\begin{document}
+
+\title{Response to the Comments of Reviewer 1}
+
+%    Information for first author
+%\author{Sam Nazari}
+
+\begin{nouppercase}
+\maketitle
+\end{nouppercase}
+First, we would like to thank the reviewer for helpful comments on our paper and his positive response to our paper. We modified the paper according to your comments and our replies are directly matching with your numbering. I should only point out that when IET formatted our paper based on their style file, the number of pages that you are referring to in your comments do not match with the current version. However, I am sure you will identify my reply to your comments based on your numbering.
+
+\begin{enumerate}
+    \item In page 4, Theorem 4, I added the reference by Horn and Johnson as you suggested. I did not find explicit proofs in the book except some tables indicating several bounds in chapter 5. I tried to prove the inequalities in terms of our $L_{\sigma}$ gains, which in turn provide the bounds for stability radii that are inversely related.
+    \item In page 4, the perturbed matrix (22) is well-known in the literature and it is an LFT (Linear Fractional Representation). We added the reference by Kemin Zhou book [35] and cited in the paragraph above the equation.
+    \item In page 5, we forgot to write the expression for the gain $K$ and very much appreciate your awareness for noticing this error. We corrected this and gave the formula at the end of LP (29). Regarding the distinction between strictly proper and proper case, it was necessary in our derivation since we initially had to relate our stability radius result of [10], which was for the case of $F=0$, with the $L_{\sigma}$ gains of Briat paper [15]. We then generalized it for $F \neq 0$ through (22). 
+    \item In page 7, Theorem 10, we made the assumption of $E_i=E_j=E$ and $C_i=C_j=C$ for the following reason. Closed form expression for stability radius can be derived for $E_i=E_j=E$ \textit{or} $C_i=C_j=C$. For example if $i = 1,2$, then one can obtain for $C_0 = C_1 = C$ and $E_0 \neq E_1$
+    \begin{align*}
+      \displaystyle  r_{\mathbb{C}} = r_{\mathbb{R}} = \frac{1}{\max \{||E_0(sI-A_0-A_1)C||,||E_1(sI-A_0-A_1)C||\}}
+    \end{align*}
+    To avoid multiple terms,we decided to consider the special case of $E_i=E_j=E$ and $C_i=C_j=C$ which would also make it easier to match them with $L_{\sigma}$ associated with system (39). Otherwise we would have had to modify (39) with multiple terms which would not have made the development transparent. As you requested, we added Remark 2 to justify why we impose these conditions. 
+\end{enumerate}
+
+Regarding your minor issues:
+\begin{enumerate}
+    \item In page 2, inequality (7) is correct. Note that one takes the derivative of the Lyapunov function with respect to time along the trajectory of the system. So, we have added time derivative of the Lyapunov function in inequality (7) to make it clear. 
+    \item In page 3, we corrected the equality (12).
+    \item In page 3, one has to distinguish between structured singular value mu and sigma-bar. So, whenever we are on fixed points on the boundary the computation is facilitated with sigma-bar as we explained before equation (13). 
+    \item In page 4, we deleted “a” in the title of Subsection 3.2.
+\end{enumerate}
+
+We also corrected all possible typos that we could find. We should point out to the reviewer that, since the other reviewer was interested in our examples, we also added an interesting result at the end of Theorem 8. An important by-product of this result is the unique commonality among the optimal state feedback gain matrices in obtaining $L_{\sigma}$ gains, which were demonstrated with numerical examples. We showed how the feedback gains from $LP_1$, $LP_{\infty}$, and LMI can be related by solving one and obtaining the other gains through (37). This has also been demonstrated in Figure 2.
+
+%\bibliography{Zotero.bib}
+%\bibliographystyle{IEEEtran}
+\end{document}
+
